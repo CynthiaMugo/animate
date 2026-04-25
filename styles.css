@@ -1,0 +1,101 @@
+/* 🌈 Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ✨ Header */
+h1 {
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* 💌 Quote Card */
+.quote-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 300px;
+  backdrop-filter: blur(8px);
+}
+
+.quote-card.animate {
+  animation: fadeSlide 0.5s ease;
+}
+
+#quote {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#source {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+}
+
+#tag {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+/* 🎯 Button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff9ecf;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 🌸 Floating Hearts */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: float 6s infinite ease-in;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+/* ✨ Card Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
